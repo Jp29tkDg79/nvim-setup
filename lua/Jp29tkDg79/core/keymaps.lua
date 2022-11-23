@@ -1,5 +1,7 @@
 --  custom telescope
 local telescope = require("Jp29tkDg79.plugins.telescope")
+-- custom terminal
+local terminal = require("Jp29tkDg79.plugins.terminal")
 
 -- for conciseness
 local keymap = vim.keymap
@@ -59,9 +61,16 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 ---------------------
 -- terminal mode
 ---------------------
+local opts = { buffer = 0 }
 keymap.set("t", "<esc>", [[<C-\><C-n>]])
 keymap.set("t", "jk", [[<C-\><C-n>]])
-keymap.set("n", "<leader>te", "<cmd>belowright new<CR><cmd>terminal<CR>")
+-- keymap.set("n", "<leader>te", "<cmd>belowright new<CR><cmd>terminal<CR>")
+keymap.set("n", "<leader>te", ":ToggleTerm<CR>")
+keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
+keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
+keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
+keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
+keymap.set("n", "<leader>lg", terminal.lazygit_toggle, { noremap = true, silent = true })
 
 vim.api.nvim_create_autocmd({ "TermOpen" }, {
   pattern = "*",

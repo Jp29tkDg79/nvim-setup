@@ -12,13 +12,19 @@ NeoVimを統合開発環境として使用できるようにするためのセ�
 - git development environment(only for git clone)
   gitの開発環境(git clone時のみ)
 - NeoVim(>=8.0.0)
+- lazygit
  
 ## インストール
 
 1. [Install neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+
+2. [Install lazygit](https://github.com/jesseduffield/lazygit)
  
 ```
+MacOS or Linux
 $ git clone https://github.com/Jp29tkDg79/nvim-setup.git ~/.config/nvim
+Windows(edit to username)
+$ git clone https://github.com/Jp29tkDg79/nvim-setup.git C:Users\<username>\AppData\Local\nvim
 ```
 
 ## プラグイン一覧(List of plugins used)
@@ -55,12 +61,13 @@ $ git clone https://github.com/Jp29tkDg79/nvim-setup.git ~/.config/nvim
 30. [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
 31. [vim-go](https://github.com/fatih/vim-go)
 32. [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
+33. [akinsho/toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 
  
 ## その他
  
-Please install Neovim in advance.
-事前にNeoVimのインストールを行なってください。
+Please install Neovim and lazygit in advance.
+事前にNeoVim及びlazygitのインストールを行なってください。
 
 ## 参考にさせていただいた動画
 

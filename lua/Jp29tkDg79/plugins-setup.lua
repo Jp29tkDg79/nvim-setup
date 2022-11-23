@@ -107,6 +107,9 @@ return packer.startup(function(use)
     "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim"
   })
 
+  -- terminal
+  use({ 'akinsho/toggleterm.nvim', tag = '*', })
+
   -- golang(golang lsp config)
   use({ "fatih/vim-go", opt = true, ft = { "go" } })
 
